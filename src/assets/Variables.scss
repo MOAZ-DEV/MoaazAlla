@@ -1,0 +1,31 @@
+$Dark_01:rgba(0, 0, 0);
+$Dark_02:rgba(0, 0, 0, 0.50);
+$Dark_03:rgba(0, 0, 0, 0.25);
+$Dark_04:rgba(0, 0, 0, 0.05);
+
+$Bright_01:rgba(255, 255, 255,);
+$Bright_02:rgba(255, 255, 255, 0.50);
+$Bright_03:rgba(255, 255, 255, 0.41);
+$Bright_04:rgba(255, 255, 255, 0.25);
+$Bright_05:rgba(255, 255, 255, 0.05);
+
+$Accent_01:rgb(234, 245, 134);
+$Accent_02:rgb(234, 245, 134, 0.75);
+$Accent_03:rgb(234, 245, 134, 0.50);
+$Accent_04:rgb(234, 245, 134, 0.25);
+
+.sixteyO {
+    opacity: .6;
+}
+.Break_Line {
+    height: 1px;
+    width: auto;
+
+    background: $Accent_01;
+  }
+  .Break_Line_v {
+    height: auto;
+    width: 1px;
+
+    background: $Accent_01;
+  }

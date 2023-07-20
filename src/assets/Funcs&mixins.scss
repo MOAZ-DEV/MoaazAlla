@@ -1,0 +1,29 @@
+/*variables*/
+$screen-sizes: (
+    "sm":576px,
+    "md":768px,
+    "lg":945px,
+    "xl":1370px,
+    "xxl":1600px,
+    "xxxl":1800px,
+);
+$ve-context  : (1000*.008) * 1px;
+$f-ve-context: (1000*.031) * .8px;
+
+
+/*mixins*/
+
+@mixin sc($size) {
+    @media (max-width: map-get($screen-sizes, $size)) {
+        @content;
+    }
+}
+
+/*functions*/
+
+@function ptr($px) {
+    @return ($px/$f-ve-context)* 1vw;
+}
+@function fptr($px) {
+    @return (($px/$f-ve-context)* 1.25rem);
+} 

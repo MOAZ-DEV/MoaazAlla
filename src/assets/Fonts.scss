@@ -1,0 +1,98 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "./Funcs&mixins.scss";
+
+.Header_Display {
+    font-family: "Clash Display", sans-serif;
+    font-weight: Regular;
+    font-size: 48px;
+    line-height: 96%;
+
+    &:before {
+        content: "\00a0 \00a0 \00a0";
+    }
+}
+.Header {
+    font-family: "Clash Display", sans-serif;
+    font-weight: Regular;
+    font-size: 48px;
+    line-height: 100%;
+}
+.Header_Lable {
+    font-family: "Clash Display", sans-serif;
+    font-weight: SemiBold;
+    font-size: 32px;
+    line-height: auto;
+}
+.Body_Title {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: SemiBold;
+    font-size: 24px;
+    line-height: auto;
+    
+   
+}
+.Body_Sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: SemiBold;
+    font-size: 16px;
+    line-height: auto;
+
+    .link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+.Body_Context {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: Regular;
+    font-size: 16px;
+    line-height: auto;
+
+    opacity: 0.6;
+
+    &:before {
+        content: "\00a0 \00a0 \00a0";
+    }
+}
+.A_Link_01 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: Regular;
+    font-size: 9px;
+    line-height: auto;
+    cursor: pointer;
+}
+.A_Link_02 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: Medium;
+    font-size: 14px;
+    line-height: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+@include sc("lg") {
+    .Header_Display {
+        font-size: 36px;
+    }
+    .Header {
+        font-size: 36px;
+    }
+    .Header_Lable {
+        font-size: 24px;
+    }
+    .Body_Title {
+        font-size: 16px;
+    }
+    .Body_Sub {
+        font-size: 12px;
+    }
+    .Body_Context {
+        font-size: 12px;
+    }
+    .A_Link_01 {
+        font-size: 9px;
+    }
+    .A_Link_02 {
+        font-size: 12px;
+    }
+}

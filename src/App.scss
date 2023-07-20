@@ -1,0 +1,431 @@
+@import "./assets/Variables.scss";
+@import "./assets/Funcs&mixins.scss";
+@import "./assets/Fonts.scss";
+
+* {
+  height: fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+
+  list-style: none;
+}
+html {
+  min-height: 100vh;
+  width: auto;
+
+  display: flex;
+  justify-content: center;
+
+  background: #292e00;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background: $Bright_03;
+
+  overflow: hidden;
+}
+
+.App {
+  height: 100vh;
+  width: clamp(200px, 100vw, 1600px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+
+  padding: 0 clamp(25px, 125px, calc((100% - 1600px) / 2));
+
+  color: $Accent_01;
+
+  overflow: hidden;
+  overflow-y: scroll;
+
+  nav {
+    height: fit-content;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 45px 0;
+
+    position: sticky;
+    top: 0;
+
+    ul {
+      display: flex;
+      gap: 25px;
+    }
+  }
+  section {
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 65px clamp(5px, 95px, calc((5vw) / 2));
+
+    border-bottom: solid 1px $Accent_01;
+
+    .Header_Display {
+      width: clamp(200px, 70%, 80vw);
+      @include sc("md") {
+        width: auto;
+      }
+    }
+    .Two_Grid_Wrap {
+      width: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 25px 25px;
+      grid-template-areas:
+        "o t"
+        "th th"
+        "f .";
+
+        @include sc("lg") {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .Body_Title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+                    line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .Body_Sub {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+                    line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        }
+    }
+    .Project_Item {
+      width: auto;
+      .Details {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 45px;
+
+        padding: 15px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+        button {
+          background: transparent;
+          cursor: pointer;
+        }
+        @include sc("md") {
+          gap: 12px;
+
+          button img {
+            width: 45px;
+          }
+        }
+      }
+      &:nth-child(0) {
+        grid-area: o;
+      }
+      &:nth-child(1) {
+        grid-area: t;
+      }
+      &:nth-child(2) {
+        grid-area: f;
+      }
+      &:nth-child(3) {
+        grid-area: th;
+      }
+      @include sc("lg") {
+        grid-area: none;
+        .Preview_Image img {
+          object-fit: cover;
+          object-position: top;
+    aspect-ratio: 16/10;
+        }
+      }
+      .Preview_Image {
+        width: auto;
+
+        img {
+          width: 100%;
+          border-radius: 12px;
+        }
+      }
+    }
+    @include sc("sm") {
+      padding: 16px;
+    }
+  }
+  .Lefted {
+    width: clamp(475px, 45%, 85vw);
+    margin-left: auto;
+    @include sc("md") {
+      margin-left: unset;
+      width: auto;
+    }
+  }
+  .Faqs_Wrap {
+    flex-direction: column;
+    justify-content: flex-end;
+
+    gap: 25px;
+
+    .Wraper {
+      display: flex;
+      flex-direction: column;
+
+      .Item {
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-top: 25px;
+
+        div {
+          width: auto;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          button {
+            padding: 9px 26px;
+            background: transparent;
+            border-radius: 100px;
+            border: solid 1px $Accent_01;
+            transition: background .5s ease;
+            cursor: pointer;
+            &:hover {
+                background: $Accent_04;
+            }
+            img {
+              rotate: 135deg;
+              transition: rotate 0.5s;
+            }
+            .rote {
+              rotate: 0deg;
+            }
+          }
+        }
+        .Answ {
+          margin-bottom: 0px;
+
+          overflow: hidden;
+          transition: margin-bottom 0.5s ease-out, max-height 0.5s ease-out;
+          max-height: 0;
+        }
+        .toggle {
+          margin-bottom: 25px;
+
+          transition: margin-bottom 0.5s ease-in, max-height 0.5s ease-in;
+          max-height: 400px;
+        }
+      }
+    }
+    @include sc("sm") {
+      .Item {
+        margin-top: 6px;
+      }
+    }
+  }
+  .Wrap_Left {
+    flex-direction: column;
+    justify-content: flex-end;
+
+    span {
+      width: clamp(calc((1vw) / 2), 475px, 85vw);
+      margin-left: auto;
+    }
+  }
+  .SpecialSS {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+
+    border: solid 1px $Accent_01;
+    border-radius: 12px;
+    box-shadow: 13px 13px 0px 0px #818469, 14px 14px 0px 0px $Accent_01;
+
+    div {
+      height: auto;
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      img {
+        margin-bottom: auto;
+        @include sc("lg") {
+          width: 100px;
+        }
+      }
+      div {
+        width: auto;
+      }
+    }
+    .leftSide {
+      width: clamp(475px, 45%, 85vw);
+      gap: 25px;
+
+      .skills_wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . . ."
+          ". dm dm ."
+          "de de . .";
+
+        .dm {
+          border-top-right-radius: 100px;
+          border-bottom-right-radius: 100px;
+          grid-area: dm;
+          aspect-ratio: 2/1;
+        }
+
+        .de {
+          border-top-left-radius: 100px;
+          grid-area: de;
+          aspect-ratio: 2/1;
+        }
+        .x {
+          border-radius: 100px;
+        
+        }.y {
+          border-bottom-left-radius: 100px;
+        
+        }
+        span {
+          width: auto;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+          aspect-ratio: 1/1;
+          border: solid 1px $Accent_01;
+
+          transition: background .5s ease;
+
+          &:hover {
+            background: $Accent_03;
+          }
+        }
+      }
+    }
+    @include sc("lg") {
+      flex-direction: column;
+gap: 24px;
+
+      box-shadow: 7px 7px 0px 0px #818469, 8px 8px 0px 0px $Accent_01;
+
+      div {
+        width: auto;
+      }
+      .leftSide {
+        width: auto;
+      }
+    }
+  }
+  footer {
+    height: fit-content;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 45px 0;
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 9px;
+      }
+    }
+    @include sc("md") {
+flex-direction: column-reverse;
+justify-content: center;
+
+gap: 9px;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 6px;
+    height: 6px;
+  }
+  &:-webkit-scrollbar-thumb {
+    background: #00000006;
+    border-radius: 100px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $Accent_01;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: $Accent_01;
+  }
+  &::-webkit-scrollbar-track {
+    background: #66666600;
+    border-radius: 100px;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: #00000006;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  @include sc("lg") {
+    gap: 45px;
+    padding: 0 9px;
+
+    nav, footer {
+      padding: 32px 15px;
+    }
+  }
+}
