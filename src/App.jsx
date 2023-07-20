@@ -129,7 +129,7 @@ function App() {
       </section>
       <section className='SpecialSS' id="services">
         <div>
-          <img src="../logo.svg" alt="" />
+          <img src="../MoaazAlla/logo.svg" alt="" />
           <span className="Header">
             Want to work together?
           </span>
@@ -158,9 +158,9 @@ function App() {
           </div>
           <div className="skills_wrap">
             <span>ReactJS</span>
-            <span className='x'>SCSS</span>
-            <span>NodeJS</span>
-            <span className='y'>ElectronJS</span>
+            <span className='x'>NodeJS</span>
+            <span>ElectronJS</span>
+            <span className='y'>SCSS</span>
             <span>JS ES6</span>
             <span className='dm'>Responsive design</span>
             <span>Webpack</span>
