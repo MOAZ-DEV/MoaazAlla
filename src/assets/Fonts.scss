@@ -62,7 +62,9 @@
     line-height: auto;
     cursor: pointer;
 
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .A_Link_02 {
     font-family: "IBM Plex Mono", monospace;
@@ -71,6 +73,10 @@
     line-height: auto;
     text-transform: uppercase;
     cursor: pointer;
+}
+a {
+    color: unset;
+    text-decoration: unset;
 }
 @include sc("lg") {
     .Header_Display {
