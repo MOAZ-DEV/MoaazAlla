@@ -53,9 +53,9 @@ function App() {
         <span className="logo Body_Sub">Moaaz <br />Alla.</span>
 
         <ul>
-          <li><span className="A_Link_01">Works</span></li>
-          <li><span className="A_Link_01">Faq</span></li>
-          <li><span className="A_Link_01">Services</span></li>
+          <a href="#works"><span className="A_Link_01">Works</span></a>
+          <a href="#faq"><span className="A_Link_01">Faq</span></a>
+          <a href="#services"><span className="A_Link_01">Services</span></a>
         </ul>
        </nav>
       <section className="Overview_wrap">
@@ -66,7 +66,7 @@ function App() {
           A driven individual interested in building high-quality products for the web, With an eye for details and a passion for delivering exceptional results,
         </span>
       </section>
-      <section>
+      <section id="works">
         <span className="Header_Display">
           Hello world! My name Is Moaaz Alla. Independant front-end web developer <br /> based in egypt
         </span>
@@ -99,7 +99,7 @@ function App() {
 
         </div>
       </section>
-      <section className="Faqs_Wrap">
+      <section className="Faqs_Wrap" id="faq">
         <span className="Header_Lable Lefted">
           FAQs
         </span>
@@ -127,7 +127,7 @@ function App() {
           </span>
         </span>
       </section>
-      <section className='SpecialSS'>
+      <section className='SpecialSS' id="services">
         <div>
           <img src="../logo.svg" alt="" />
           <span className="Header">
