@@ -7,22 +7,22 @@ function App() {
       {
         title: "Todo Web App - Electron, React",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../res/MoaazAlla/img01.svg",
+        imgSrc: "../MoaazAlla/res/img01.svg",
         url: ""
       }, {
         title: "Eosmas Baisc Web - Html & Scss",
         subTitle: "Frontend dev (ReactJs, Scss) - September 2023",
-        imgSrc: "../res/MoaazAlla/img03.svg",
+        imgSrc: "../MoaazAlla/res/img03.svg",
         url: ""
       }, {
         title: "CairoNews Web - React & Scss",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../res/MoaazAlla/img02.svg",
+        imgSrc: "../MoaazAlla/res/img02.svg",
         url: ""
       }, {
         title: "BrandCapital Web Design - Figma",
         subTitle: "Frontend dev (Baisc) - September 2023",
-        imgSrc: "../res/MoaazAlla/img06.svg",
+        imgSrc: "../MoaazAlla/res/img06.svg",
         url: ""
       },
     ], [faqsList, setFaqsList] = useState([
@@ -87,7 +87,7 @@ function App() {
                   </span>
                 </div>
                 <button>
-                  <img src="../res/MoaazAlla/link.svg" alt='Link' />
+                  <img src="../MoaazAlla/res/link.svg" alt='Link' />
                 </button>
               </div>
               <div className="Preview_Image">
@@ -109,7 +109,7 @@ function App() {
               <div>
                 <span className="Body_Sub Ques">{faq.Ques}</span>
                 <button className="switch" onClick={() => toggleFaq(i)}>
-                  <img className={(i === faqState) ? "rote" : "null"} src="../res/MoaazAlla/thexvector.svg" />
+                  <img className={(i === faqState) ? "rote" : "null"} src="../MoaazAlla/res/thexvector.svg" />
                 </button>
               </div>
               <span className={(i === faqState) ? "Body_Context Answ toggle" : "Body_Context Answ"}>{faq.Answ}</span>
@@ -174,9 +174,9 @@ function App() {
           ©2023 Divesh Chauhan
         </span>
         <div className="links">
-          <span className="A_Link_02">LinkedIn<img src="../res/MoaazAlla/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
-          <span className="A_Link_02">Github<img src="../res/MoaazAlla/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
-          <span className="A_Link_02">Instagram<img src="../res/MoaazAlla/socialLink.svg" alt="" /></span>
+          <span className="A_Link_02">LinkedIn<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
+          <span className="A_Link_02">Github<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
+          <span className="A_Link_02">Instagram<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span>
         </div>
       </footer>
     </div>
