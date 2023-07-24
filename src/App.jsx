@@ -7,23 +7,23 @@ function App() {
       {
         title: "Todo Web App - Electron, React",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../MoaazAlla/res/img01.svg",
-        url: ""
+        imgSrc: "../MoaazAlla/res/image 15.png",
+        url: "https://www.figma.com/file/5tAWYw66SmBEHUpck1E9hs/Untitled?type=design&t=qQfZ51eQYijQDezu-6"
       }, {
         title: "Eosmas Baisc Web - Html & Scss",
         subTitle: "Frontend dev (ReactJs, Scss) - September 2023",
-        imgSrc: "../MoaazAlla/res/img03.svg",
-        url: ""
+        imgSrc: "../MoaazAlla/res/image 15.png",
+        url: "https://github.com/MOAZ-DEV/Eosmas"
       }, {
         title: "CairoNews Web - React & Scss",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../MoaazAlla/res/img02.svg",
-        url: ""
+        imgSrc: "../MoaazAlla/res/image 15.png",
+        url: "https://github.com/MOAZ-DEV/react-caironews"
       }, {
         title: "BrandCapital Web Design - Figma",
         subTitle: "Frontend dev (Baisc) - September 2023",
-        imgSrc: "../MoaazAlla/res/img06.svg",
-        url: ""
+        imgSrc: "../MoaazAlla/res/image 15.png",
+        url: "https://www.figma.com/file/rHzpTwnXmMqewg32PeJdtX/Brand-capital?type=design&t=qQfZ51eQYijQDezu-6"
       },
     ], [faqsList, setFaqsList] = useState([
       {
@@ -86,7 +86,7 @@ function App() {
                     {work.subTitle}
                   </span>
                 </div>
-                <button>
+                <button onClick={() => window.open(work.url)}>
                   <img src="../MoaazAlla/res/link.svg" alt='Link' />
                 </button>
               </div>
@@ -174,9 +174,9 @@ function App() {
           ©2023 Divesh Chauhan
         </span>
         <div className="links">
-          <span className="A_Link_02">LinkedIn<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
-          <span className="A_Link_02">Github<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
-          <span className="A_Link_02">Instagram<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span>
+          <span className="A_Link_02" onClick={() => window.open("https://www.linkedin.com/in/moazallaelden/")}>LinkedIn<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
+          <span className="A_Link_02" onClick={() => window.open("https://github.com/MOAZ-DEV")}>Github<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
+          <span className="A_Link_02" onClick={() => window.open("https://www.instagram.com/wutssuppp_/")}>Instagram<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span>
         </div>
       </footer>
     </div>
