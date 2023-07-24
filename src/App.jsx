@@ -7,22 +7,22 @@ function App() {
       {
         title: "Todo Web App - Electron, React",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../MoaazAlla/res/image 15.png",
+        imgSrc: "../MoaazAlla/res/img01.svg",
         url: "https://www.figma.com/file/5tAWYw66SmBEHUpck1E9hs/Untitled?type=design&t=qQfZ51eQYijQDezu-6"
       }, {
         title: "Eosmas Baisc Web - Html & Scss",
         subTitle: "Frontend dev (ReactJs, Scss) - September 2023",
-        imgSrc: "../MoaazAlla/res/image 15.png",
+        imgSrc: "../MoaazAlla/res/img03.svg",
         url: "https://github.com/MOAZ-DEV/Eosmas"
       }, {
         title: "CairoNews Web - React & Scss",
         subTitle: "UI/UX Design July 2023 - September 2023",
-        imgSrc: "../MoaazAlla/res/image 15.png",
+        imgSrc: "../MoaazAlla/res/img02.svg",
         url: "https://github.com/MOAZ-DEV/react-caironews"
       }, {
         title: "BrandCapital Web Design - Figma",
         subTitle: "Frontend dev (Baisc) - September 2023",
-        imgSrc: "../MoaazAlla/res/image 15.png",
+        imgSrc: "../MoaazAlla/res/img06.svg",
         url: "https://www.figma.com/file/rHzpTwnXmMqewg32PeJdtX/Brand-capital?type=design&t=qQfZ51eQYijQDezu-6"
       },
     ], [faqsList, setFaqsList] = useState([
@@ -87,7 +87,7 @@ function App() {
                   </span>
                 </div>
                 <button onClick={() => window.open(work.url)}>
-                  <img src="../MoaazAlla/res/link.svg" alt='Link' />
+                  <img  onClick={() => window.open(work.url)} src="../MoaazAlla/res/link.svg" alt='Link' />
                 </button>
               </div>
               <div className="Preview_Image">
