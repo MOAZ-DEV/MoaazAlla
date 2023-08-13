@@ -171,7 +171,7 @@ function App() {
       </section>
       <footer>
         <span className="A_Link_01 sixteyO">
-          ©2023 Divesh Chauhan
+          ©2023 Moaaz Alla Elden
         </span>
         <div className="links">
           <span className="A_Link_02" onClick={() => window.open("https://www.linkedin.com/in/moazallaelden/")}>LinkedIn<img src="../MoaazAlla/res/socialLink.svg" alt="" /></span><span className='Break_Line_v'></span>
