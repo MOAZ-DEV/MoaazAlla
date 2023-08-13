@@ -43,8 +43,7 @@ body {
     height: 8px;
   }
   &::-webkit-scrollbar-button {
-    width: 6px;
-    height: 6px;
+    display: none;
   }
   &:-webkit-scrollbar-thumb {
     background: $Accent_01;
@@ -57,7 +56,7 @@ body {
     background: $Accent_01;
   }
   &::-webkit-scrollbar-track {
-    background: #ffffff62;
+    background: $Accent_01;
     border-radius: 100px;
   }
   &::-webkit-scrollbar-track:hover {
